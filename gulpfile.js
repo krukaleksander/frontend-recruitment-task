@@ -25,6 +25,12 @@ function scssTask(){
     ); // put final CSS in dist folder
 }
 
+function cssLibs() {
+ return src('node_modules/normalize.css/normalize.css')
+     .pipe(concat('_libs.scss'))
+     .pipe(dest('src/scss'))
+}
+
 function jsTask(){
     return src([
         files.jsPath
@@ -44,11 +50,11 @@ function cacheBustTask(){
 
 function watchTask(){
     watch([files.scssPath, files.jsPath], 
-        parallel(scssTask, jsTask));    
+        parallel(scssTask,jsTask));
 }
 
 exports.default = series(
-    parallel(scssTask, jsTask), 
+    parallel(scssTask,cssLibs, jsTask),
     cacheBustTask,
     watchTask
 );
