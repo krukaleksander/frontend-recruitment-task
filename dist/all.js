@@ -1,0 +1,1 @@
+document.querySelector(".content__btn"),document.querySelector(".overlay"),document.querySelector(".alert__close"),document.querySelector(".alert__close");
