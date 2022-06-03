@@ -36,9 +36,7 @@
       margin: 0;
     }
     &__text {
-      font-size: 1.6rem;
-      font-weight: 300;
-      line-height: 150%
+     @include text;
     }
     &__count {
       font-weight: 700;
@@ -60,10 +58,7 @@
       line-height: 120%;
     }
     &__text {
-      font-weight: 300;
-      font-size: 1.6rem;
-      line-height: 150%;
-      color: $dark;
+     @include text;
     }
     &__btn {
       font-size: 1.6rem;

@@ -5,8 +5,15 @@ $primary: #E4C1AE;
 
 @mixin title{
   font-size: 4.2rem;
-  color: $dark;
   font-weight: 700;
+  color: $dark;
+}
+
+@mixin text {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: $dark;
+  line-height: 150%;
 }
 
 * {
