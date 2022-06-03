@@ -18,18 +18,18 @@
             this.value = localStorage.getItem('taskStorage')
         }
         click() {
-            if(this.value >=4) this.displayResetButton()
+            if(this.value >=4 && !this.resetButton.classList.contains('active')) this.displayResetButton()
             this.value++
             this.container.innerText = this.value
             this.setLocalStorageValue(this.value.toString())
         }
         displayResetButton() {
-            this.resetButton.style.display = 'inline-block';
+            this.resetButton.classList.add('active')
         }
         resetValue() {
             this.value = 0;
             this.container.innerText = this.value;
-            this.resetButton.style.display = 'none';
+            this.resetButton.classList.remove('active');
         }
         setLocalStorageValue(value) {
             localStorage.setItem('taskStorage', value)
