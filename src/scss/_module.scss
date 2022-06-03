@@ -73,6 +73,10 @@
       border-radius: 32px;
       border: none;
       cursor: pointer;
+      &--zero {
+        display: none;
+        background: red
+      }
     }
   }
   .active {
