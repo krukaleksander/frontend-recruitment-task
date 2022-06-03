@@ -6,6 +6,7 @@
   background: #FFFFFF;
   margin: 96px auto 0 auto;
   &__overlay {
+    display: none;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -13,8 +14,12 @@
     right: 0;
     background: $dark;
     opacity: 0.5;
+    &--active {
+      display: block;
+    }
   }
   .alert {
+    display: none;
     position: absolute;
     width: 920px;
     height: 210px;
@@ -24,6 +29,9 @@
     background: #FFFFFF;
     opacity: 1;
     padding: 56px 95px;
+    &--active {
+      display: block;
+    }
     &__close {
       position: absolute;
       top: 46px;
