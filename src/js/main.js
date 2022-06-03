@@ -6,7 +6,19 @@
     const elementsChangingDisplay = [overlay, alert];
     const elementsClosingAlert = [closeAlertIcon, overlay]
 
+    class Counter {
+    value = 0;
+    container = document.querySelector('.alert__count');
+        click() {
+            this.value++
+            this.container.innerText = this.value
+        }
+    }
+
+    const clickCounter = new Counter()
+
     button.addEventListener('click', () => {
+        clickCounter.click()
         elementsChangingDisplay.forEach(element => element.classList.add('active'));
     })
 
