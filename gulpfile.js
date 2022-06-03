@@ -9,20 +9,19 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const replace = require('gulp-replace');
 
-// File paths
-const files = { 
+const files = {
     scssPath: 'src/scss/**/*.scss',
     jsPath: 'src/js/**/*.js'
 };
 
 function scssTask(){    
     return src(files.scssPath)
-        .pipe(sourcemaps.init()) // initialize sourcemaps first
-        .pipe(sass([])) // compile SCSS to CSS
-        .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
-        .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
+        .pipe(sourcemaps.init())
+        .pipe(sass([]))
+        .pipe(postcss([ autoprefixer(), cssnano() ]))
+        .pipe(sourcemaps.write('.'))
         .pipe(dest('dist')
-    ); // put final CSS in dist folder
+    );
 }
 
 function cssLibs() {
