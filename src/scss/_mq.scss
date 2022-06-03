@@ -1,0 +1,21 @@
+$breakepoints: (
+        ultrasmall: "max-width: 330px",
+        xsmall: "max-width: 481px",
+        small: "max-width: 640px",
+        medium: "max-width: 865px",
+        large: "max-width: 1023px",
+        xlarge: "max-width: 1150px",
+        xxlarge: "max-width: 1440px",
+);
+
+@mixin mq($breakepoint) {
+  $size: map-get($breakepoints, $breakepoint);
+
+  @if $size {
+    @media (#{$size}) {
+      @content;
+    }
+  } @else {
+    @error '"#{$breakepoint}" - no recognize';
+  }
+}
