@@ -1,1 +1,1 @@
-document.querySelector(".content__btn"),document.querySelector(".overlay"),document.querySelector(".alert__close"),document.querySelector(".alert__close");
+(()=>{const e=document.querySelector(".content__btn");var t=document.querySelector(".module__overlay"),c=document.querySelector(".alert");document.querySelector(".alert__close");const o=[t,c];e.addEventListener("click",()=>{o.forEach(e=>e.classList.add("active"))})})();
