@@ -2,6 +2,13 @@
 
 $dark: #121212;
 $primary: #E4C1AE;
+
+@mixin title{
+  font-size: 4.2rem;
+  color: $dark;
+  font-weight: 700;
+}
+
 * {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
