@@ -1,8 +1,9 @@
+.container {
+  width: 1440px;
+  height: 960px;
 .module {
   display: flex;
   justify-content: space-evenly;
-  width: 1440px;
-  height: 960px;
   background: #FFFFFF;
   margin: 96px auto 0 auto;
   &__overlay {
@@ -40,7 +41,7 @@
     &__text {
      @include text;
     }
-    &__count {
+    &__important {
       font-weight: 700;
     }
     &__btn {
@@ -76,4 +77,5 @@
   .active {
     display: block;
   }
+}
 }

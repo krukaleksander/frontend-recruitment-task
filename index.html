@@ -8,25 +8,28 @@
     <link rel="stylesheet" href="./dist/main.css">
 </head>
 <body>
-<div class="module">
-    <div class="module__overlay">
-    </div>
-    <div class="alert">
-        <i class="fa-solid fa-x alert__close"></i>
-        <h1 class="alert__title">Alert!</h1>
-        <p class="alert__text">You have clicked <span class="alert__count">0</span><span class="alert__count"> times</span> to related button.</p>
-        <button class="alert__btn">reset</button>
-    </div>
-    <div class="img-hero">
+<div class="container">
+    <section class="module">
+        <div class="module__overlay">
         </div>
-        <div class="content">
+        <div class="alert">
+            <i class="fa-solid fa-x alert__close"></i>
+            <h1 class="alert__title">Alert!</h1>
+            <p class="alert__text">You have clicked <strong class="alert__important"><span class="alert__count">0</span> times</strong> to related button.</p>
+            <button class="alert__btn">reset</button>
+
+        </div>
+        <div class="img-hero">
+        </div>
+        <main class="content">
             <h1 class="content__title">
                 Lorem Ipsum
             </h1>
             <p class="content__text">Infinitely scalable, feature-rich and cloud-native data management and protection for
                 modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.</p>
             <button class="content__btn">button</button>
-        </div>
+        </main>
+    </section>
 </div>
 <script src="./src/js/main.js"></script>
 </body>
