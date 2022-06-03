@@ -5,6 +5,47 @@
   height: 960px;
   background: #FFFFFF;
   margin: 96px auto 0 auto;
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $dark;
+    opacity: 0.5;
+  }
+  .alert {
+    position: absolute;
+    width: 920px;
+    height: 210px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    opacity: 1;
+    padding: 56px 95px;
+    &__close {
+      position: absolute;
+      top: 46px;
+      right: 46px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    &__title {
+      font-size: 4.2rem;
+      color: $dark;
+      font-weight: 700;
+      margin: 0;
+    }
+    &__text {
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 150%
+    }
+    &__count {
+      font-weight: 700;
+    }
+  }
   .img-hero {
     width: 505px;
     height: 330px;
