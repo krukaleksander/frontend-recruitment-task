@@ -9,13 +9,28 @@
     class Counter {
     value = 0;
     container = document.querySelector('.alert__count');
+    resetButton = document.querySelector('.alert__btn');
+
+        init() {
+            this.resetButton.addEventListener('click', () => this.resetValue())
+        }
         click() {
+            if(this.value >=4) this.displayResetButton()
             this.value++
             this.container.innerText = this.value
+        }
+        displayResetButton() {
+            this.resetButton.style.display = 'inline-block';
+        }
+        resetValue() {
+            this.value = 0;
+            this.container.innerText = this.value;
+            this.resetButton.style.display = 'none';
         }
     }
 
     const clickCounter = new Counter()
+    clickCounter.init();
 
     button.addEventListener('click', () => {
         clickCounter.click()
