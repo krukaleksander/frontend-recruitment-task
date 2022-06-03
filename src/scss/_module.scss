@@ -14,9 +14,6 @@
     right: 0;
     background: $dark;
     opacity: 0.5;
-    &--active {
-      display: block;
-    }
   }
   .alert {
     display: none;
@@ -29,9 +26,6 @@
     background: #FFFFFF;
     opacity: 1;
     padding: 56px 95px;
-    &--active {
-      display: block;
-    }
     &__close {
       position: absolute;
       top: 46px;
@@ -80,5 +74,8 @@
       border: none;
       cursor: pointer;
     }
+  }
+  .active {
+    display: block;
   }
 }
