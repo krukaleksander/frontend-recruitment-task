@@ -16,6 +16,18 @@ $primary: #E4C1AE;
   line-height: 150%;
 }
 
+@mixin btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 100%;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  padding: 16px 40px;
+  border-radius: 32px;
+  border: none;
+  cursor: pointer;
+}
+
 * {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;

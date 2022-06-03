@@ -43,6 +43,12 @@
     &__count {
       font-weight: 700;
     }
+    &__btn {
+      @include btn;
+      display: none;
+      background: red;
+      margin-bottom: 5px;
+    }
   }
   .img-hero {
     width: 505px;
@@ -63,20 +69,8 @@
      @include text;
     }
     &__btn {
-      font-size: 1.6rem;
-      font-weight: 700;
-      line-height: 100%;
-      color: #FFFFFF;
-      text-transform: capitalize;
+      @include btn;
       background: $primary;
-      padding: 16px 40px;
-      border-radius: 32px;
-      border: none;
-      cursor: pointer;
-      &--zero {
-        display: none;
-        background: red
-      }
     }
   }
   .active {
