@@ -35,4 +35,10 @@ $primary: #E4C1AE;
 
 html {
   font-size: 10px;
+  @include mq('small') {
+    font-size: 9px;
+  }
+  @include mq('ultrasmall') {
+    font-size: 7px;
+  }
 }

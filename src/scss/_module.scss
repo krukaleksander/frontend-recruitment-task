@@ -1,11 +1,23 @@
 .container {
   width: 1440px;
-  height: 960px;
+  @include mq('xlarge') {
+    width: 100vw;
+  }
+  @include mq('medium') {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 .module {
   display: flex;
   justify-content: space-evenly;
   background: #FFFFFF;
   margin: 96px auto 0 auto;
+  @include mq('medium') {
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+  }
   &__overlay {
     display: none;
     position: absolute;
@@ -27,12 +39,27 @@
     background: #FFFFFF;
     opacity: 1;
     padding: 56px 95px;
+    @include mq('medium') {
+      width: 500px;
+    }
+    @include mq('small') {
+      width: 340px;
+      height: 250px;
+    }
+    @include mq('ultrasmall') {
+      width: 300px;
+    }
     &__close {
       position: absolute;
       top: 46px;
       right: 46px;
       font-size: 1.2rem;
       cursor: pointer;
+      @include mq(small) {
+        font-size: 2rem;
+        top: 20px;
+        right: 20px;
+      }
     }
     &__title {
       @include title;
@@ -56,15 +83,36 @@
     height: 330px;
     background: url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_4_3,c_fill,g_auto__c_scale,w_538.jpg") center;
     background-size: cover;
+    @include mq('xsmall') {
+      width: 450px;
+      background: url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1,c_fill,g_auto__c_scale,w_450.jpg") center
+    }
+    @include mq('ultrasmall') {
+      width: 200px;
+      height: 200px;
+      display: block;
+      margin: 0 auto;
+      background: url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1,c_fill,g_auto__c_scale,w_200.jpg") center
+        }
   }
   .content {
     width: 380px;
     height: 250px;
+    @include mq('ultrasmall') {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     &__title {
       @include title;
       width: 380px;
       height: 50px;
       line-height: 120%;
+      @include mq('ultrasmall') {
+       text-align: center;
+      }
     }
     &__text {
      @include text;
@@ -72,6 +120,9 @@
     &__btn {
       @include btn;
       background: $primary;
+      @include mq('xsmall') {
+        margin: 0 auto;
+      }
     }
   }
   .active {
