@@ -81,18 +81,18 @@
   .img-hero {
     width: 505px;
     height: 330px;
-    background: url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_4_3,c_fill,g_auto__c_scale,w_538.jpg") center;
+    background: url("../../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_4_3,c_fill,g_auto__c_scale,w_538.jpg") center;
     background-size: cover;
     @include mq('xsmall') {
       width: 450px;
-      background: url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1,c_fill,g_auto__c_scale,w_450.jpg") center
+      background: url("../../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1,c_fill,g_auto__c_scale,w_450.jpg") center
     }
     @include mq('ultrasmall') {
       width: 200px;
       height: 200px;
       display: block;
       margin: 0 auto;
-      background: url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1,c_fill,g_auto__c_scale,w_200.jpg") center
+      background: url("../../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1,c_fill,g_auto__c_scale,w_200.jpg") center
         }
   }
   .content {

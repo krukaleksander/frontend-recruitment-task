@@ -27,7 +27,7 @@ function scssTask(){
 function cssLibs() {
  return src('node_modules/normalize.css/normalize.css')
      .pipe(concat('_libs.scss'))
-     .pipe(dest('src/scss'))
+     .pipe(dest('src/scss/parts'))
 }
 
 function jsTask(){
